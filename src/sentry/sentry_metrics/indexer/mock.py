@@ -32,7 +32,17 @@ class MockIndexer(StringIndexer):
 
     def resolve(self, organization: Organization, use_case: UseCase, string: str) -> Optional[int]:
         # NOTE: Ignores ``use_case`` for simplicity.
-        return _STRINGS.get(string)
+        # return _STRINGS.get(string)
+
+        import random
+
+        try:
+            resolved = _STRINGS[string]
+        except KeyError:
+            # just generating a random number for now
+            resolved = random.randint(20, 100)
+
+        return resolved
 
     def reverse_resolve(
         self, organization: Organization, use_case: UseCase, id: int
