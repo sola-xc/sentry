@@ -32,7 +32,7 @@ parsimonious==0.8.0
 petname==2.6
 phonenumberslite==8.12.0
 Pillow==8.2.0; python_version == '3.6'
-Pillow==8.3.1; python_version > '3.6'
+Pillow==8.3.2; python_version > '3.6'
 progressbar2==3.32.0
 python-rapidjson==1.4
 # If we bump it to 2.8.4 or greater then Python 3.6 & 3.8 would use the same version
