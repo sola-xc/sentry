@@ -263,7 +263,7 @@ function RuleModal({
               setData({...data, sampleRate: !!value ? Number(value) : undefined});
             }}
             placeholder={'\u0025'}
-            value={sampleRate}
+            value={typeof sampleRate === 'undefined' ? 0 : sampleRate}
             inline={false}
             hideControlState={!errors.sampleRate}
             error={errors.sampleRate}

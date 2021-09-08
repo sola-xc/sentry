@@ -85,6 +85,7 @@ class FiltersAndSampling extends AsyncView<Props, State> {
   }
 
   successfullySubmitted = (projectDetails: Project, successMessage?: React.ReactNode) => {
+    console.log('projectDetails', projectDetails);
     this.setState({projectDetails});
 
     if (successMessage) {
@@ -207,6 +208,8 @@ class FiltersAndSampling extends AsyncView<Props, State> {
         </Alert>
       );
     }
+
+    console.log('errorRules', errorRules);
 
     return (
       <React.Fragment>
